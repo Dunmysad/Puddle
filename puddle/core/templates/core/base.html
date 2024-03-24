@@ -16,9 +16,10 @@
             {% if request.user.is_authenticated %}
                 <a href="{% url 'conversation:inbox' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-whirw rounded-xl hover:bg-teal-700">信箱</a>
                 <a href="{% url 'dashboard:index' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-whirw rounded-xl hover:bg-gray-700">仪表盘</a>
+                <a href="{% url 'core:logout' %}" class="px-6 py-3 text-lg font-semibold bg-yellow-500 text-whirw rounded-xl hover:bg-gray-700">退出登录</a>
             {% else %}
                 <a href="{% url 'core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-whirw rounded-xl hover:bg-teal-700">注册</a>
-                <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-whirw rounded-xl hover:bg-gray-700">登录</a>
+                <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-whirw rounded-xl hover:bg-gray-300">登录</a>
             {% endif %}
             </div>
     </nav>
